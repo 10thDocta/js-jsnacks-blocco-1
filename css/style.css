@@ -50,6 +50,16 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+p.reset {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+header:hover p.reset {
+  color: white;
+}
+
 /* MAIN */
 section {
   color: black;

@@ -9,6 +9,7 @@ const ex1Btn = document.getElementById("ex1Btn");
 const ex2Btn = document.getElementById("ex2Btn");
 const ex3Btn = document.getElementById("ex3Btn");
 const ex4Btn = document.getElementById("ex4Btn");
+const resetBtn = document.getElementById("reset");
 
 // funzione per verificare se il valore immesso è un numero
 const checkNumb = (exNumb, numb1, numb2 = 0) => {
@@ -84,8 +85,16 @@ const ex4 = () => {
   }
 };
 
+// reset
+const reset = () => {
+  for (let index = 1; index <= 4; index++) {
+    document.getElementById(`ex${index}Out`).innerHTML = "";
+  }
+};
+
 // definisco i trigger
 ex1Btn.addEventListener("click", ex1);
 ex2Btn.addEventListener("click", ex2);
 ex3Btn.addEventListener("click", ex3);
 ex4Btn.addEventListener("click", ex4);
+resetBtn.addEventListener("click", reset);
