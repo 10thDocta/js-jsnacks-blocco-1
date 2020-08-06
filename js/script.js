@@ -25,8 +25,8 @@ const checkNumb = (exNumb, numb1, numb2 = 0) => {
 
 // esercizio 1
 const ex1 = () => {
-  let numb1 = parseInt(prompt("Inserisci primo numero"));
-  let numb2 = parseInt(prompt("Inserisci secondo numero"));
+  let numb1 = parseInt(prompt("Inserisci primo numero"), 10);
+  let numb2 = parseInt(prompt("Inserisci secondo numero"), 10);
   let exNumb = 1;
 
   if (checkNumb(exNumb, numb1, numb2)) {
@@ -57,7 +57,7 @@ const ex2 = () => {
 
 // esercizio 3
 const ex3 = () => {
-  let numb = parseInt(prompt("Inserisci un numero"));
+  let numb = parseInt(prompt("Inserisci un numero"), 10);
   let pariDispari = numb % 2;
   let exNumb = 3;
 
@@ -74,7 +74,7 @@ const ex3 = () => {
 
 // esercizio 4
 const ex4 = () => {
-  let numb = parseInt(prompt("Inserisci un numero"));
+  let numb = parseInt(prompt("Inserisci un numero"), 10);
   let random = Math.floor(Math.random() * 10);
   let exNumb = 4;
 
@@ -92,9 +92,19 @@ const reset = () => {
   }
 };
 
+// color
+const color = () => {
+  let a = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let c = Math.floor(Math.random() * 256);
+
+  resetBtn.style.backgroundColor = "rgb(" + a + "," + b + "," + c + ")";
+};
+
 // definisco i trigger
 ex1Btn.addEventListener("click", ex1);
 ex2Btn.addEventListener("click", ex2);
 ex3Btn.addEventListener("click", ex3);
 ex4Btn.addEventListener("click", ex4);
 resetBtn.addEventListener("click", reset);
+resetBtn.addEventListener("click", color);
